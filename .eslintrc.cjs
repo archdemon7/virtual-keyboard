@@ -1,4 +1,4 @@
-export default {
+module.exports = {
     "env": {
         "browser": true,
         "es2021": true,
@@ -11,6 +11,4 @@ export default {
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "rules": {
-    }
 }

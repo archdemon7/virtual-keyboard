@@ -19,5 +19,6 @@
   "homepage": "https://github.com/archdemon7/virtual-keyboard#readme",
   "devDependencies": {
     "eslint": "^8.39.0"
-  }
+  },
+  "type": "module"
 }
