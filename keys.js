@@ -51,7 +51,7 @@ const keys = {
   'KeyM': {code: 'KeyM', key: 'm', keyRu: 'ь'},
   'Comma': {code: 'Comma', key: ',', keyEnShift: '<', keyRu: 'б'},
   'Period': {code: 'Period', key: '.', keyEnShift: '>', keyRu: 'ю'},
-  'Slash': {code: 'Slash', key: '/', keyEnShift: '?', keyRu: '.'},
+  'Slash': {code: 'Slash', key: '/', keyEnShift: '?', keyRu: '.', keyRuShift: '.'},
   'ArrowUp': {code: 'ArrowUp', key: '▲', keuRuShift: '.'},
   'ShiftRight': {code: 'ShiftRight', key: 'Shift'},
   'ControlLeft': {code: 'ControlLeft', key: 'Ctrl'},
