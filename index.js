@@ -46,6 +46,21 @@ const keyboard = document.createElement('div');
 keyboard.classList.add('keyboard');
 container.append(keyboard);
 
+const information = document.createElement('div');
+information.classList.add('information');
+container.append(information);
+
+const keyboardOs = document.createElement('p');
+keyboardOs.classList.add('os-text');
+keyboardOs.innerHTML = 'Клавиатура создана в операционной системе Windows';
+information.append(keyboardOs);
+
+const languageSwich = document.createElement('p');
+languageSwich.classList.add('os-text');
+languageSwich.innerHTML = 'Для переключения языка комбинация: левыe ctrl + alt';
+information.append(languageSwich);
+
+
 let lang = localStorage.getItem('lang') ? localStorage.getItem('lang') : 'RU';
 let shiftPressed = false;
 let capsPressed = false;
@@ -168,7 +183,7 @@ keysForPress.forEach(el => {
           let keyName = element.getAttribute('keyName');
           let { value, keyShift } = takeLetter(keyName);
           if (value.length == 1 && /^([а-яё]+|[a-z]+)$/i.test(value)) {
-            element.innerHTML = value.toUpperCase();
+            element.innerHTML = value;
           } else if (keyShift) {
             element.innerHTML = value;
           }
@@ -249,7 +264,7 @@ document.addEventListener('keyup', e => {
         let keyName = element.getAttribute('keyName');
         let { value, keyShift } = takeLetter(keyName);
         if (value.length == 1 && /^([а-яё]+|[a-z]+)$/i.test(value)) {
-          element.innerHTML = value.toUpperCase();
+          element.innerHTML = value;
         } else if (keyShift) {
           element.innerHTML = value;
         }
@@ -422,8 +437,6 @@ function keyboardDown() {
     })
   }
 }
-
-
 
 
 
