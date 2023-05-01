@@ -79,7 +79,7 @@ function saveLang() {
 
 function switchLang() {
   if (pressedKeys.has('Control') && pressedKeys.has('Alt')){
-    if (lang == 'RU')  {
+    if (lang == 'RU') {
       lang = 'EN';
       if (capsPressed == true && shiftPressed == false) {
         keyboardUp();
