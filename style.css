@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  background: #16171b;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  gap: 60px;
+  margin: 0 auto;
+}
+
+.title {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.title-text {
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 76px;
+  user-select: none;
+}
+
+.title-section:nth-child(1) {
+  color: #ff20f2;
+}
+
+.title-section:nth-child(2) {
+  color: #45bbff;
+}
+
+.title-section:nth-child(3) {
+  color: #cee444;
+}
+
+
+textarea {
+  background: rgba(22, 23, 27, 0.5);
+  resize: none;
+  border: 1px solid transparent;
+  box-shadow: 0px 1px 10px 0 rgb(135, 36, 128),
+              0 1px 3px 2px #df0fb2,
+              0 1px 3px 0px rgba(135, 36, 128, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  padding: 20px 20px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.keyboard {
+  padding: 12px;
+  background: rgba(22, 23, 27, 0.5);
+  border: 1px solid transparent;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, rgb(135, 36, 128), rgba(135, 36, 128, 0.2));
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  gap: 12px;
+}
+
+.button {
+  width: 56px;
+  height: 56px;
+  background: #0E0F11;
+  border: 1px solid #50234D;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FF20F2;
+  text-shadow: 0px 0px 10px #FF20F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease-in;
+  transition: border-radius 0.3s ease-out;
+  user-select: none;
+}
+
+.button:hover {
+  background: #301A2F;
+}
+
+.double-button {
+  width: 124px;
+  grid-column: span 2;
+}
+
+.whitespace {
+  width: 464px;
+  grid-column: span 7;
+}
+
+.button.active,
+.button:active {
+  background: #0E0F11;
+  border: 1px solid #FF20F2;
+  box-shadow: 0px 0px 12px #FF20F2;
+  border-radius: 100px;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.os-text {
+  color: white;
+}
+
+@keyframes move {
+  100% {
+      transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
