@@ -215,9 +215,19 @@ document.addEventListener('keydown', e => {
   } else if (e.code == 'ControlLeft' || e.code == 'ControlRight') {
     pressedKeys.add('Control');
     switchLang();
+    keysForPress.forEach(element => {
+      if (element.getAttribute('keyName') === e.code) {
+        element.classList.add('active');
+      }
+    })
   } else if (e.code == 'AltLeft' || e.code == 'AltRight') {
     pressedKeys.add('Alt');
     switchLang();
+    keysForPress.forEach(element => {
+      if (element.getAttribute('keyName') === e.code) {
+        element.classList.add('active');
+      }
+    })
   } else if (e.code == 'CapsLock') {
     if (capsPressed == false) {
       capsPressed = true;
@@ -252,8 +262,18 @@ document.addEventListener('keyup', e => {
     shiftPressed = false;
   } else if (e.code == 'ControlLeft' || e.code == 'ControlRight') {
     pressedKeys.delete('Control');
+    keysForPress.forEach(element => {
+      if (element.getAttribute('keyName') === e.code) {
+        element.classList.remove('active');
+      }
+    })
   } else if (e.code == 'AltLeft' || e.code == 'AltRight') {
     pressedKeys.delete('Alt');
+    keysForPress.forEach(element => {
+      if (element.getAttribute('keyName') === e.code) {
+        element.classList.remove('active');
+      }
+    })
   } else if (e.code == 'CapsLock') {
     if (capsPressedCount == 2) {
       capsPressedCount += 1;
@@ -392,7 +412,6 @@ function keyboardUp() {
   }
 }
 
-
 function keyboardDown() {
   if (capsPressed == true && shiftPressed == false) {
     keysForPress.forEach(element => {
@@ -412,7 +431,6 @@ function keyboardDown() {
         element.innerHTML = value;
       } else if (keyShift) {
         element.innerHTML = value;
-        console.log(keyName)
       }
     })
   } else if (capsPressed == true && shiftPressed == true) {
